@@ -8,6 +8,7 @@ request.send();
 request.onload = function() {
   var foods = request.response;
   showHeroes(foods);
+  bindIngredients(foods);
 }
 
 
@@ -26,11 +27,32 @@ function showHeroes(jsonObj){
         }
       }
       if (check == 1) {
-        input[j]= row[i].IRDNT_NM;
+        input[j] = row[i].IRDNT_NM;
         j++;
       }
   }
-  for(var i = 0; i < input.length; i++){
-    console.log(input[i]);
+}
+
+
+function bindIngredients(jsonObj){
+  var row = jsonObj["Grid_20150827000000000227_1"]['row']
+  var ingredientDiv = document.createElement('div');
+  var j;
+  for (var i = 0; i < row.length; i = j) {
+    var myDiv = document.createElement('div');
+    for (j = i; i < row.length; j++) {
+      var input = document.createElement('p');
+      if (row[j].RECIPE_ID == row[j+1].RECIPE_ID) {
+        input.textContent = row[j].IRDNT_NM;
+        myDiv.appendChild(input);
+      } else{
+        input.textContent = row[j].IRDNT_NM;
+        myDiv.appendChild(input);
+        break;
+      }
+    }
+    ingredientDiv.appendChild(myDiv);
+    section.appendChild(ingredientDiv);
+    j = j+1;
   }
 }
