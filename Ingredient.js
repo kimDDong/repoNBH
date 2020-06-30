@@ -16,7 +16,7 @@ request.onload = function() {
 function showHeroes(jsonObj){
   var row = jsonObj["Grid_20150827000000000227_1"]['row']
   var myDiv = document.createElement('div');
-  var input[0] = 'Text';
+  var input = [];
   var j =0;
   for (var i =0; i<row.length; i++){
     var check =1;
@@ -29,5 +29,8 @@ function showHeroes(jsonObj){
         input[j]= row[i].IRDNT_NM;
         j++;
       }
+  }
+  for(var i = 0; i < input.length; i++){
+    console.log(input[i]);
   }
 }
