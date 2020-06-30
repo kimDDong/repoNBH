@@ -1,0 +1,27 @@
+1. 검색
+2. 리스트내 탐색
+3. 출력
+이니까
+일단 INGREDIENT JSON로
+1. 리스트 구현해서
+2. 검색 기능으로 활용할수 있게 해야하고 검색 한 후에
+(ipnut(list) -> output(recipe_ID))
+
+
+3. NAME JSON이랑 RECIPE JSON으로 출력해주면 되니까
+(ipnut(recipe_ID)-> output(name))
+(ipnut(recipe_ID)-> output(recipe))
+
+
+
+
+
+DATA
+totalIngredient			total ingredient data
+recipeIngredientList		recipes ingredient data
+	recipeIngredient		recipe ingredient data (index[0] = ID)
+$inputIngredientList		input ingredient data
+recommandList			recommand recipe ID data
+recipeList				total recipe list data
+	recipeOrder		recipes data (index[0] = ID)
+		recipeChapter	recipe step data
