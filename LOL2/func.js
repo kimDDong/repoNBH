@@ -1,5 +1,4 @@
 var $inputIngredientList = [];
-var recommandList = [];
 $(function () { // Attaching DOM element to varibles
     var $ingredientsList = $("#ingredientsList");
     var $myInput = $("#myInput");
@@ -101,6 +100,7 @@ $(function () { // Attaching DOM element to varibles
         }
     });
     $("#searchButton").on("click", function () { // Returning false if the input is empty
+        var recommandList = [];
         if (! $inputIngredientList.length) {
             // ---------------------------------------------------//
             // add reaction func
