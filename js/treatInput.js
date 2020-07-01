@@ -138,6 +138,14 @@ $(function () { // Attaching DOM element to varibles
                     // ---------------------------------------------------//
                     // modify HTML code
                     // ---------------------------------------------------//
+
+                    var recommandDiv = document.querySelector('#container_body');
+                    var myDiv = document.createElement('div');
+                    var myPara1 = document.createElement('p');
+                    myPara1.textContent = recipeInformationList[j][1][2];
+                    myDiv.appendChild(myPara1);
+                    recommandDiv.appendChild(myDiv);
+
                     console.log(recipeInformationList[j]);
                 }
             }
