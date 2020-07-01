@@ -17,14 +17,23 @@
 
 
 DATA
-totalIngredient			total ingredient data
-recipeIngredientList		recipes ingredient data
-	recipeIngredient		recipe ingredient data (index[0] = ID)
+treatInput.js
 $inputIngredientList		input ingredient data
 recommandList			recommand recipe ID data
+
+ingredientList.js
+totalIngredient			total ingredient data
+
+ingredient.js
+recipeIngredientList		recipes ingredient data
+	recipeIngredient		recipe ingredient data (index[0] = ID)
+
+recipe.js
 recipeList				total recipe list data
 	recipeOrder		recipes data (index[0] = ID)
 		recipeChapter	recipe step data
+
+recipeInfromation.js
 recipeInformationList		total recipe info data
 	informationOrder		infos data (index[0] = ID)
 		informationChapter	info data	

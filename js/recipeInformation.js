@@ -1,14 +1,14 @@
 var recipeInformationList = [];
-var requestURL5 = 'https://raw.githubusercontent.com/kimDDong/repoNBH/master/test3.json';
+var requestURL5 = 'https://raw.githubusercontent.com/kimDDong/repoNBH/master/json/recipeInformation.json';
 var request5 = new XMLHttpRequest();
 request5.open('GET', requestURL5);
 request5.responseType = 'json';
 request5.send();
 request5.onload = function () {
     var foods = request5.response;
-    bindRecipeInformation(foods);
+    makeRecipeInformation(foods);
 }
-function bindRecipeInformation(jsonObj) {
+function makeRecipeInformation(jsonObj) {
     var n1 = 0;
     var foodss = jsonObj['Grid_20150827000000000226_1']['row'];
     var j;

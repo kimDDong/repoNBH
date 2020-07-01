@@ -1,15 +1,15 @@
 var recipeIngredientList = [];
-var requestURL2 = 'https://raw.githubusercontent.com/kimDDong/repoNBH/master/Ingredients.json';
+var requestURL2 = 'https://raw.githubusercontent.com/kimDDong/repoNBH/master/json/ingredient.json';
 var request2 = new XMLHttpRequest();
 request2.open('GET', requestURL2);
 request2.responseType = 'json';
 request2.send();
 request2.onload = function () {
     var foods = request2.response;
-    bindIngredients(foods);
+    makeRecipeIngredientList(foods);
 }
 
-function bindIngredients(jsonObj) {
+function makeRecipeIngredientList(jsonObj) {
     var row = jsonObj["Grid_20150827000000000227_1"]['row'];
     var j;
     var n1 = 0;

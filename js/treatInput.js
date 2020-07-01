@@ -1,7 +1,7 @@
 var $inputIngredientList = [];
 $(function () { // Attaching DOM element to varibles
     var $ingredientsList = $("#ingredientsList");
-    var $myInput = $("#myInput");
+    var $inputIngredient = $("#myInput");
     var $notification = $("#notification");
     // Counting amount of items in the list
     // To display or hide notification
@@ -14,13 +14,13 @@ $(function () { // Attaching DOM element to varibles
     }
     // Attaching event handler to the add button
     $("#ingredientAdd").on("click", function () { // Returning false if the input is empty
-        if (! $myInput.val() || !totalIngredient.includes($myInput.val())) {
+        if (! $inputIngredient.val() || !totalIngredient.includes($inputIngredient.val())) {
             // ---------------------------------------------------//
             // add reaction func
             // ---------------------------------------------------//
             return false;
         }
-        if ($inputIngredientList.includes($myInput.val())) {
+        if ($inputIngredientList.includes($inputIngredient.val())) {
             displayNotification();
             // ---------------------------------------------------//
             // add reaction func
@@ -28,10 +28,10 @@ $(function () { // Attaching DOM element to varibles
             return false;
         }
         // Appending li with the input value
-        $ingredientsList.append("<li><text>" + $myInput.val() + "</text><button class='delete'>&#10006</button></li>");
-        $inputIngredientList.push($myInput.val());
+        $ingredientsList.append("<li><text>" + $inputIngredient.val() + "</text><button class='delete'>&#10006</button></li>");
+        $inputIngredientList.push($inputIngredient.val());
         // Cleaning input after add event
-        $myInput.val("");
+        $inputIngredient.val("");
         // Display/Hide Notification
         displayNotification();
         // Attaching even handler to the delete button
@@ -57,13 +57,13 @@ $(function () { // Attaching DOM element to varibles
     });
     $("#myInput").keydown(function (key) {
         if (key.keyCode == 13) { // Returning false if the input is empty
-            if (! $myInput.val() || !totalIngredient.includes($myInput.val())) {
+            if (! $inputIngredient.val() || !totalIngredient.includes($inputIngredient.val())) {
                 // ---------------------------------------------------//
                 // add reaction func
                 // ---------------------------------------------------//
                 return false;
             }
-            if ($inputIngredientList.includes($myInput.val())) {
+            if ($inputIngredientList.includes($inputIngredient.val())) {
                 displayNotification();
                 // ---------------------------------------------------//
                 // add reaction func
@@ -71,10 +71,10 @@ $(function () { // Attaching DOM element to varibles
                 return false;
             }
             // Appending li with the input value
-            $ingredientsList.append("<li><text>" + $myInput.val() + "</text><button class='delete'>&#10006</button></li>");
-            $inputIngredientList.push($myInput.val());
+            $ingredientsList.append("<li><text>" + $inputIngredient.val() + "</text><button class='delete'>&#10006</button></li>");
+            $inputIngredientList.push($inputIngredient.val());
             // Cleaning input after add event
-            $myInput.val("");
+            $inputIngredient.val("");
             // Display/Hide Notification
             displayNotification();
             // Attaching even handler to the delete button

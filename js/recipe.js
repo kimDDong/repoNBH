@@ -2,16 +2,16 @@
 // http://211.237.50.150:7080/openapi/ac3b64e99f683fbe430d99f9f35560e0280d00afa5571e77141c4bd95117e00c/json/Grid_20150827000000000226_1/1/1/  name
 // http://211.237.50.150:7080/openapi/ac3b64e99f683fbe430d99f9f35560e0280d00afa5571e77141c4bd95117e00c/json/Grid_20150827000000000227_1/1/1/  ingredient
 var recipeList = [];
-var requestURL4 = 'https://raw.githubusercontent.com/kimDDong/repoNBH/master/recipe.json';
+var requestURL4 = 'https://raw.githubusercontent.com/kimDDong/repoNBH/master/json/recipe.json';
 var request4 = new XMLHttpRequest();
 request4.open('GET', requestURL4);
 request4.responseType = 'json';
 request4.send();
 request4.onload = function () {
     var foods = request4.response;
-    showRecommandList(foods);
+    makeRecipeList(foods);
 }
-function showRecommandList(jsonObj) {
+function makeRecipeList(jsonObj) {
     var n1 = 0;
     var foodss = jsonObj['Grid_20150827000000000228_1']['row'];
     var j;
