@@ -32,7 +32,7 @@ $(document).ready(function () {
                 // modify HTML code
                 // ---------------------------------------------------//
                 var recipeIMG = recipeInformationList[i][1][14];
-                input += "<div class=\"row\"><div class=\"col-12\"><div class=\"receipe-slider owl-carousel\"><img src=\"" + recipeIMG + "\" width=\"100%\" height=\"100%\" alt=\"\"></div></div>";
+                input += "<div class=\"row\"><div class=\"col-12\"><div class=\"receipe-slider owl-carousel owl-loaded owl-drag\"><img src=\"" + recipeIMG + "\" width=\"320px\" height=\"100%\" alt=\"\"></div></div>";
                 // <!-- @ IMG -->
                 var receipeName = recipeInformationList[i][1][2];
                 var receipeNation = recipeInformationList[i][1][5];
